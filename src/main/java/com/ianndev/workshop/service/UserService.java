@@ -37,7 +37,7 @@ public class UserService implements Serializable {
         repo.deleteById(id);
     }
 
-    public User update(User obj){
+    public User update(User obj) {
         User newObj = repo.findById(obj.getId()).get();
         updateData(newObj, obj);
         return repo.save(newObj);
